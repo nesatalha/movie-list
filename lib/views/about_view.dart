@@ -2,8 +2,8 @@ import 'package:fenix/models/movie_model.dart';
 import 'package:flutter/material.dart';
 
 class AboutScreen extends StatelessWidget {
-  MovieModel movie;
-  AboutScreen({super.key, required this.movie});
+  final MovieModel movie;
+  const AboutScreen({super.key, required this.movie});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class AboutScreen extends StatelessWidget {
                 },
                 errorBuilder: (BuildContext context, Object object, StackTrace? error) {
                   if(error != null) {
-                    return SafeArea(bottom: false,child: SizedBox(width: double.infinity,child: Text("Image not found", textAlign: TextAlign.center,)));
+                    return const SafeArea(bottom: false,child: SizedBox(width: double.infinity,child: Text("Image not found", textAlign: TextAlign.center,)));
                   } else {
                     return SafeArea(child: Container());
                   }

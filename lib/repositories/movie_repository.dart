@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 
-import 'package:fenix/models/movie_model.dart';
 import 'package:fenix/models/movie_response_model.dart';
 import 'package:http/http.dart' as http;
 

@@ -3,8 +3,8 @@ import 'package:fenix/views/about_view.dart';
 import 'package:flutter/material.dart';
 
 class MovieCard extends StatelessWidget {
-  MovieModel movie;
-  MovieCard({super.key,required this.movie});
+  final MovieModel movie;
+  const MovieCard({super.key,required this.movie});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class MovieCard extends StatelessWidget {
                   },
                   errorBuilder: (BuildContext context, Object object, StackTrace? error) {
                     if(error != null) {
-                      return SafeArea(bottom: false,child: SizedBox(width: double.infinity,child: Text("Image not found", textAlign: TextAlign.center,)));
+                      return const SafeArea(bottom: false,child: SizedBox(width: double.infinity,child: Text("Image not found", textAlign: TextAlign.center,)));
                     } else {
                       return SafeArea(child: Container());
                     }
@@ -64,9 +64,9 @@ class MovieCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: 5,),
-              Text(movie.voteAverage.toStringAsFixed(1),style: TextStyle(color: Colors.black87),),
-              SizedBox(height: 15,),
+              const SizedBox(height: 5,),
+              Text(movie.voteAverage.toStringAsFixed(1),style: const TextStyle(color: Colors.black87),),
+              const SizedBox(height: 15,),
             ],
           ),
         ),
