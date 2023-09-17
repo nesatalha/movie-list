@@ -122,11 +122,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemCount: moviesList.length,
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         crossAxisSpacing: 20,
                         mainAxisSpacing: 20,
-                        mainAxisExtent: 385,
+                        mainAxisExtent: MediaQuery.of(context).size.width * 0.85, /// Can be improved with time using dynamic height packages
                       ),
                       itemBuilder: (context, index) {
                         MovieModel movie = moviesList[index];

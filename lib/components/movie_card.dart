@@ -55,7 +55,7 @@ class MovieCard extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   movie.originalTitle,
-                  maxLines: 2,
+                  maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     fontSize: 18,
